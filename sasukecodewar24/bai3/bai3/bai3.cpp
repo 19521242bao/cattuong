@@ -18,18 +18,8 @@ bool chSo(int n)
 	return true;
 		
 }
-int solve(int n)
-{
-	int a;
-	int s = 0;
-	while (n != 0)
-	{
-		a = n % 10;
-		s += a / 2;
-		n = n / 10;
-	}
-	return s;
-}
+
+
 int superEvenNumber(int n)
 {
 	int dem = 0;
