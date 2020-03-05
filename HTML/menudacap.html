@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>Meunu da cap</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            font-family:initial;
+            font-size: 16px;
+        }
+        #menu{
+            width: 650px;
+            height:40px;
+            background-color: rgb(225, 65, 204);
+            margin: 50px auto;
+        }
+       ul.root > li
+        {
+        
+            list-style: none;
+            float:left;
+            position: relative;
+        }
+        ul.root >li > a
+        {
+            text-decoration: none;
+            color: #FFF;
+            padding: 0px 15px 0px 15px;
+            line-height: 40px;
+            display: block;
+            
+        }
+        ul.root > li > a:hover
+        {
+            background-color: yellow;
+            color: red;
+            transition: ease-in 0.35s;
+            -moz-transition: ease-in 0.35s;
+            -webkit-transition: ease-in 0.35s;
+
+        }
+        ul.submenu
+        { 
+            width: 250px;
+            background: #13616d;
+            min-height: 150px;
+            display:none;
+            position: absolute;
+            
+        }
+        ul.submenu li{
+            list-style:none;
+        }
+        ul.submenu li a{
+            color:#FFF;
+            text-decoration: none;
+            display:block;
+            border-top:1px solid rgb(34, 178, 173);
+            line-height: 40px;
+            text-indent:10px
+        }
+        ul.root>li:hover ul.submenu
+        {
+            display:block;
+        }
+        u1.submenu li a:hover
+        {
+            background:  orange;
+            color: red;
+            transition: ease-in 0.35s;
+            -moz-transition: ease-in 0.35s;
+            -webkit-transition: ease-in 0.35s;
+        }
+        ul.root>li:hover ul.submenu{
+            display: block;
+            transition: ease-out 0.35s;
+            -moz-transition: ease-out 0.35s;
+            -webkit-transition: ease-out 0.35s;
+        }
+
+
+    </style>
+    </head>
+<body>
+    <div id="menu">
+        <ul class="root">
+            <li><a href="">Home</a><ul class="submenu">
+                <li><a href="">Menu sub item 1</a></li>
+                <li><a href="">Menu sub item 2</a></li>
+                <li><a href="">Menu sub item 3</a></li>
+                <li><a href="">Menu sub item 4</a></li>
+                <li><a href="">Menu sub item 5</a></li>
+            </ul>  </li>
+            <li><a href="">About</a><<ul class="submenu">
+                <li><a href="">Menu sub item 1</a></li>
+                <li><a href="">Menu sub item 2</a></li>
+                <li><a href="">Menu sub item 3</a></li>
+                <li><a href="">Menu sub item 4</a></li>
+                <li><a href="">Menu sub item 5</a></li>
+            </ul>  /li>
+            <li><a href="">Products</a>
+                <ul class="submenu">
+                    <li><a href="">Menu sub item 1</a></li>
+                    <li><a href="">Menu sub item 2</a></li>
+                    <li><a href="">Menu sub item 3</a></li>
+                    <li><a href="">Menu sub item 4</a></li>
+                    <li><a href="">Menu sub item 5</a></li>
+                </ul>  
+            </li>     
+            <li><a href="">Services</a><ul class="submenu">
+                <li><a href="">Menu sub item 1</a></li>
+                <li><a href="">Menu sub item 2</a></li>
+                <li><a href="">Menu sub item 3</a></li>
+                <li><a href="">Menu sub item 4</a></li>
+                <li><a href="">Menu sub item 5</a></li>
+            </ul>  </li>
+            <li><a href="">Contact</a><ul class="submenu">
+                <li><a href="">Menu sub item 1</a></li>
+                <li><a href="">Menu sub item 2</a></li>
+                <li><a href="">Menu sub item 3</a></li>
+                <li><a href="">Menu sub item 4</a></li>
+                <li><a href="">Menu sub item 5</a></li>
+            </ul>  </li>
+        </ul>
+    </div>
+</body>
+</html>
