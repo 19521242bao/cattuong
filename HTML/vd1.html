@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>  
+        <h3 id='1'> </h3>
+        <h3 id='2'> </h3>
+        <h3 id='3'> </h3>
+        <h3 id='4'> </h3>
+
+    </body>
+</html>
+<script>
+    function solve(name)
+    {
+        var dem=0;
+    for(let i=0;i<name.length;i++)
+        if(name[i]==" ")
+            dem++;
+        if(dem===name.length)
+            return true;
+        return false;
+    } 
+    
+    var name=prompt("ten ban la gi do")
+    console.log(name);
+    var body=document.body;
+    var age=prompt("ban bao nhieu tuoi");
+    function isNumbers(num)
+    {
+        for(var i=0;i<num.length;i++)
+            if(num[i]<'0'||num[i]>'9')
+                return false;
+        return true;
+                
+    }
+    if(isNumbers(age)===false)
+    {
+            body.innerHTML='<h1>loi thong tin ve tuoi</h1>';
+            
+    }
+    
+    var name1=prompt("nhap ten cau thu ban thich")
+    var favor=prompt("so thich cua ban la gi")
+   
+    if(name===null||age===null||name1===null||favor===null)
+    {
+            body.innerHTML='<h1>loi thong tin</h1>';
+            
+    }
+   if(solve(name)==true||solve(age)==true||solve(name1)==true||solve(favor)==true)
+   {
+            body.innerHTML='<h1>loi thong tin</h1>';
+            
+    }
+    if(name.length==0||age.length==0||name1.length==0||favor.length==0)
+        {
+            body.innerHTML='<h1>loi thong tin</h1>';
+            
+        }
+    else
+    {
+    var body=document.body;
+    var namehtml=document.getElementById('1')
+    var agehtml=document.getElementById('2')
+    var nameahtml=document.getElementById('3')
+    namehtml.innerHTML+=name;
+    agehtml.innerHTML+=age;
+    nameahtml.innerHTML+=name1;
+    var favorhtml=document.getElementById('4')
+    favorhtml.innerHTML+=favor;
+    }
+</script>
+function onClick()
+{
+     console.log("clicked");
+}
+ clickME.addEventListener('click',onClick);
+ //element.addEventListener.("nameevent",callbackfunction);
+ //button tag
+ //input
+ var nam1=document.getElementById("1")
+ var nam2=document.getElementById("2")
+ var nam3=document.getElementById("3")
+ var nam4=document.getElementById("4")
+ var nam5=document.getElementById("5")
+function onClick()
+      {
+           let b=prompt("ban co muon xoa cau thu nay khoi danh sach hay ko")
+          if(b==="YES")
+               nam1.remove();
+              
+          console.log("cau thu nay duoc giu lai doi hinh")
+
+     }
+     nam1.addEventListener('click',function onClick1()
+     {
+      var b=prompt("ban co muon xoa cau thu nay khoi danh sach hay ko")
+          if(b==="YES")
+               {
+                   nam1.remove();
+               }
+          console.log("cau thu nay duoc giu lai doi hinh")
+     });
+     nam2.addEventListener('click',function onClick2()
+     {
+      var b=prompt("ban co muon xoa cau thu nay khoi danh sach hay ko")
+          if(b==="YES")
+               {
+                   nam2.remove();
+               }
+          console.log("cau thu nay duoc giu lai doi hinh")
+     });
+     nam3.addEventListener('click',function onClick3()
+     {
+      var b=prompt("ban co muon xoa cau thu nay khoi danh sach hay ko")
+          if(b==="YES")
+               {
+                   nam3.remove();
+               }
+          console.log("cau thu nay duoc giu lai doi hinh")
+     });
+     nam4.addEventListener('click',function onClick4()
+     {
+      var b=prompt("ban co muon xoa cau thu nay khoi danh sach hay ko")
+          if(b==="YES")
+               {
+                   nam5.remove();
+               }
+          console.log("cau thu nay duoc giu lai doi hinh")
+     });
+     nam5.addEventListener('click',function onClick5()
+     {
+      var b=prompt("ban co muon xoa cau thu nay khoi danh sach hay ko")
+          if(b==="YES")
+               {
+                   nam5.remove();
+               }
+          console.log("cau thu nay duoc giu lai doi hinh")
+     });
+     //CACH2
+     var body=document.body;
+     body.addEventListener("click",function(event)
+     {
+         var target=event.target;
+        arr=[1,2,3,4,5];
+        for(let i=0;i<arr.length;i++)
+          if(arr[i]==target)
+      {        arr[i].remove();
+              break;
+     }
+         } )
+
+    
+ <a href="https://codelearn.io/">click here</a>
+ <p style="color:purple;">ga con ngu ngoc .</p>
+ <p style="font-family:courier;">This is a paragraph.</p>
+ <a href="https://github.com/19521242bao/cattuong"target="#">github</a>
+ <img src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/03/Scottish-Fold_01.jpg" alt="cat">
+ <img src="https://www.newshub.co.nz/dam/form-uploaded-images-ordered/2019/11/24/GETTY-labrador-puppy-1120.jpg">
+</body>
+</html>
+<<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+ <input id="input">
+ 
+
+   
+<button type="text" value=""></button>
+
+</html>
+<script>
+
+function solveproblem(event)
+{
+
+
+
+var body=document.body;
+var s;
+if(event.key==="Enter")
+{
+
+  s=`<h2>${input.value}</h2>`;
+ body.innerHTML+=s;
+ s="";
+  input =document.getElementById("input")
+  input.focus()
+ input.addEventListener("keypress",solveproblem)
+
+
+}
+}
+var input =document.getElementById("input")
+input.addEventListener("keypress",solveproblem)
+
+
+
+
+</script>
