@@ -1,0 +1,112 @@
+body{
+    font-family: Tahoma;
+    font-size: 13px;
+    width:1000px;
+    margin:0px auto;
+
+}
+#menu_top{
+    background :blueviolet;
+    height: 40px; 
+ }
+ #banner{
+     
+     height:auto;
+     width:1000px;
+ }
+ #main #left{
+     width:700px;
+     
+     float: left;
+     min-height: 400px;
+ }
+ #main #right{
+     width: 200px;
+     background: blueviolet;
+     min-height: 400px;
+     float: left;
+ }
+ #footer{
+     background: #000;
+     width: 1000px;
+     text-align: center;
+     height: 60px;
+     color: aliceblue;
+     clear: left;
+     line-height: 60px;
+ }
+ #menu_top ul{
+     margin:0px;
+     padding: 0px;
+ }
+ #menu_top ul li{
+    list-style: none;
+    float: left;
+}
+#menu_top ul li a{
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color:#fff;
+    padding:0px 20px 0px 20px;
+    border-right: 1px solid #ccc;
+
+}
+#menu_top ul li a.active
+{
+    background: #1949b5;  
+}
+#banner img
+{
+    
+    width: 1000px;
+}
+#main #left ul{
+    margin :0px;
+    padding: 0px;
+}
+#main #left ul li{
+    list-style: none;
+    clear: left;
+    border-bottom: 2px solid #ccc;
+    float: left;
+    margin-bottom: 20px;
+}
+#main #left ul li img{
+    margin-right: 10px;
+    float :left;
+    margin-bottom:  20px;
+}
+#main #left ul li h2{
+    font-size: 16px;
+    margin-top: 0px;
+}
+#main{
+    margin-top: 20px;
+}
+#main #right.menu_right ul{
+    margin: 0px;
+    padding: 0px;
+}
+#main #right.menu_right ul li{
+    list-style: none;
+}
+#main #right .menu_right ul li a{
+    display: block;
+    text-decoration: none;
+    line-height: 43px;
+    border-bottom: 1px solid #ccc;
+    background-image: url(../images/menu.svg) no-repeat 0px;
+    text-indent: 25px;
+    color:#87878787;
+    font-size: 14px;
+}
+#main #right .menu_right  h3{
+   background: #194d58 url(../images/menu.svg) no-repeat 0px; 
+   height: 40px;
+   margin-top:  0px;
+   text-align: center;
+   font-size: 14px;
+   text-indent: 30px;
+}
