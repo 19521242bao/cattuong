@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InPut</title>
+    </head>
+    <body>
+        <input type="" id="name"/>
+        <select id="city">
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+        </select> 
+        <br>
+        <input type="radio" class="gender" value="Nam" name="gender">Nam;
+        <input type="radio" class="gender" value="Nu"name="gender">Nu;
+        <button onclick="showMessage()">Hiển thị</button>
+        <div id="result"></div>
+        <div id="cityresult"></div>
+
+    </body>
+    <script>
+            function showMessage()
+            {
+                let name=document.getElementById("name").value;
+                let city=document.getElementById("city").value;
+                let gender=document.querySelector('.gender:checked').value;
+                console.log(gender);
+                document.getElementById("result").innerHTML=`
+                    Hello: ${name}
+                    <br/>
+                    Thành phố nơi bạn đang sống là ${city}
+                    <br/>
+                    Gioi tính của bạn là ${gender}`
+                
+            }
+    </script>
+</html>
