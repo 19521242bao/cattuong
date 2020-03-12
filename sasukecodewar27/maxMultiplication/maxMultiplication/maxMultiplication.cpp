@@ -2,10 +2,28 @@
 //
 
 #include <iostream>
+#include<vector>
+#include<functional>
+#include<algorithm>
+using namespace std;
+long long maxMultiplication(std::vector<int> a)
+{
+	int n = a.size();
+	sort(a.begin(), a.end());
+	long long s = (long long)a[n - 1] * a[n - 2];
+	long long  s1 = (long long)a[1] * a[0];
+	if (s < 0 && s1 < 0)
+		return 0;
+	if (s >= s1)
+		return s;
+	return s1;
+
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	vector<int>a{ 1,2,3,4 };
+   cout << maxMultiplication(a);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
