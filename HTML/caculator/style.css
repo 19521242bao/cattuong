@@ -1,0 +1,83 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+html{
+    background :url(image1.jpg)
+}
+hr {
+	height: 2px;
+	background: royalblue;
+	border: none;
+	margin: 1rem 0 1rem 0;
+}
+h1{
+    color: rgb(29, 22, 220);
+    height: 5rem;
+    text-align: center;
+    font-size: 50px;
+    margin:2rem 1rem
+}
+h4{
+    color: rgb(142, 65, 225);
+    height: 5rem;
+    text-align: center;
+    font-size: 50px;
+    margin:2rem 1rem
+}
+ #container {
+	position: relative;
+	width: 300px;
+	height: 350px;
+    margin-left: 30px;
+	background: royalblue;
+}
+input[type=text]{
+    width:94%;
+    height:3rem;
+    padding:7rem;
+    padding:.5rem;
+    font-size: 94%;
+    margin: 0 .8rem 0 0;
+	text-align: left;
+	color: #000000;
+} 
+input[type=button] {
+	float:left;
+	width: 25%;
+	height: 3.8rem;
+	color:rgb(255, 255, 255);
+	font-size: 2rem;
+	text-align:center;
+	border: 1px solid rgb(51, 255, 150);
+	background: rgb(0, 7, 135);
+} 
+input[type=button]:hover{
+    background: rgb(41, 226, 247)
+}
+@media screen and (max-width:320px) {
+    h1 {
+    margin: .5rem;
+      padding: .50rem 1rem;
+    font-size: 2rem;
+  }
+    #container {
+      background: #3fbaa0;
+    height: 2rem;
+    margin: .5rem auto;
+  }
+    
+    input[type=text] {
+      height: 1.5rem;
+      padding: .5rem;
+      font-size: 1.5rem;
+  }
+    
+    input[type=button] {
+      height: 1.8rem;
+      font-size: 1rem;
+  }
+    hr {
+      display: none;
+    }
+}
