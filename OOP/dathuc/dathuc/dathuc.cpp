@@ -47,25 +47,6 @@ void congDaThuc(DATHUC* x, DATHUC* y, DATHUC* &a)
 			a->heso[i] = y->heso[i];
 
 }
-//void congDaThuc(DATHUC* x, DATHUC* y, DATHUC*& a)
-//{
-//
-//	int b = max(x->n, y->n);
-//	int b1 = min(x->n, y->n);
-//	a->n = b;
-//	a->heso = new float[a->n + 1];
-//	for (int i = 0; i <= b1; i++)
-//	{
-//		a->heso[i] = x->heso[i] + y->heso[i];
-//	}
-//	if (x->n >= y->n)
-//		for (int i = b1 + 1; i <= b; i++)
-//			a->heso[i] = x->heso[i];
-//	else
-//		for (int i = b1 + 1; i <= b; i++)
-//			a->heso[i] = y->heso[i];
-//
-//}
 void truDaThuc(DATHUC* x, DATHUC* y, DATHUC*& b)
 {
 	int a = max(x->n, y->n);
@@ -114,23 +95,13 @@ int main()
 	c = new DATHUC;
 	nhapDaThuc(x);
 	nhapDaThuc(y);
-	/*truDaThuc(x, y, b);
-	xuatDaThuc(b)*/;
-	//xuatDaThuc(c);
-	//nhanDaThuc(x, y, c);
-	/*xuatDaThuc(a);*/
-	congDaThuc(x, y, c);
-	xuatDaThuc(c);
+	truDaThuc(x, y, b);
+	congDaThuc(x, y, a);
+	nhanDaThuc(x, y, c);
+	xuatDaThuc(b);
+	xuatDaThuc(c);	
+	xuatDaThuc(a);
 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
