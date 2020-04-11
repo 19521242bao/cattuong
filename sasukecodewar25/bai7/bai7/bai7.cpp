@@ -31,7 +31,7 @@ std::vector<int> sortArray(std::vector<int> a)
 	int s;
 	int k = 0, v = 0;
 	sort(b.begin(),b.end());
-	c.begin(), c.end(), std::greater<int>();
+	sort(c.begin(), c.end(), greater<int>());
 	for (int i = 0; i < n; i++)
 	{
 		if (a[i] > 0)
