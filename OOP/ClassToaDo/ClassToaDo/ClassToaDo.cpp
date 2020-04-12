@@ -36,6 +36,10 @@ double ClassToaDo::Distance(const ClassToaDo& a)
 	double result = pow(hdo - a.hdo, 2) + pow(tdo - a.tdo, 2);
 	return sqrt(result);
 }
+ClassToaDo::~ClassToaDo()
+{
+	return;
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
