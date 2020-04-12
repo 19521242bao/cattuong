@@ -11,6 +11,7 @@ public:
 	void Xuat();
 	void TinhTien(int x,int y);
 	double Distance(const ClassToaDo&);
+	~ClassToaDo();
 
 
 };
