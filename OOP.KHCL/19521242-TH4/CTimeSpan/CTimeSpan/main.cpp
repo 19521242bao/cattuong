@@ -6,9 +6,10 @@ int main()
 {
 	CTimeSpan a, b, c;
 	cin >> a >> b;
-	cout << a << b;
-	c = a + b;
-	cout << c;
+	cout << a << endl;
+	cout<<b<<endl;
+	/*c = a + b;
+	cout << c<<endl;*/
 	c = a - b;
-	cout << c;
+	cout << c<<endl;
 }
