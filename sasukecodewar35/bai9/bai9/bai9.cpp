@@ -26,7 +26,7 @@ string solve(int a, int b)
 	int m = s2.length();
 	while (s.length() != m + n)
 	{
-		if (s1[i] > s2[j])
+		if (s1[i] >= s2[j])
 		{
 			s += s1[i];
 			if (i == n - 1)
@@ -39,14 +39,16 @@ string solve(int a, int b)
 		}
 		else
 		{
-			s += s2[j];
-			if (j == m - 1)
 			{
-				for (int k = i; k < n; k++)
-					s += s1[k];
+				s += s2[j];
+				if (j == m - 1)
+				{
+					for (int k = i; k < n; k++)
+						s += s1[k];
+				}
+				else
+					j++;
 			}
-			else
-				j++;
 		}
 	}
 	return s;
@@ -55,16 +57,22 @@ long long maxNumber(int a, int b)
 {
 	string s = solve(a, b);
 	string s3 = solve(b, a);
-	if (s3 > s)
-		s = s3;
 	int n = s.size();
-	long long sum = 0,c=0;
+	long long sum = 0, c = 0;
 	for (int i = 0; i < n; i++)
 	{
 		c = s[i] - '0';
-		sum += c * pow1(10, n -i - 1);
+		sum += c * pow1(10, n - i - 1);
 
 	}
+	long long sum1 = 0;
+	for (int i = 0; i < n; i++)
+	{
+		c = s3[i] - '0';
+		sum1 += c * pow1(10, n - i - 1);
+
+	}
+	return max(sum1, sum);
 
 	return sum;
 }
@@ -74,14 +82,4 @@ int main()
 	cin >> a >> b;
 	cout << maxNumber(a, b);
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+//test cho:5988329 6983522
