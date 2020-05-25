@@ -46,13 +46,8 @@ ostream& operator<<(ostream& os, const Time& a) {
 Time Time::operator+(const Time& a) {
 
 	Time tm;
-
 	tm.sec = sec + a.sec;
-
-
-
 	tm.min = min + a.min + tm.sec / 60;
-
 	tm.sec %= 60;
 
 
