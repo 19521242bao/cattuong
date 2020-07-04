@@ -8,6 +8,7 @@ void printArray(int a[], int n) {
 	}
 	cout << endl;
 }
+
 void quickSort(int a[], int l, int r) {
 	int p = a[(l + r) / 2];
 	int i = l, j = r;
