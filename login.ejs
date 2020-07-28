@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %>Login screen</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+    <div id="login_div" class="main-div">
+        <h3>Firebase Web login Example</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+    
+        <button onclick="login()">Login to Account</button>
+      </div>
+      <div id="user_div" class="loggedin-div">
+        <h3>Welcome User</h3>
+        <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+        <button onclick="logout()">Logout</button>
+      </div>
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDfUiZXZnrsPbgK0JATB_FZN8T01axvTG0",
+      authDomain: "c4eproject.firebaseapp.com",
+      databaseURL: "https://c4eproject.firebaseio.com",
+      projectId: "c4eproject",
+      storageBucket: "c4eproject.appspot.com",
+      messagingSenderId: "380353641610",
+      appId: "1:380353641610:web:f7f1a129fcdd508a410173",
+      measurementId: "G-SN03P9FTDQ"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script >
+      firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+
+    document.getElementById("user_div").style.display = "block";
+    document.getElementById("login_div").style.display = "none";
+
+    var user = firebase.auth().currentUser;
+
+    if(user != null){
+
+      var email_id = user.email;
+      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
+
+    }
+
+  } else {
+    // No user is signed in.
+
+    document.getElementById("user_div").style.display = "none";
+    document.getElementById("login_div").style.display = "block";
+
+  }
+});
+
+function login(){
+
+  var userEmail = document.getElementById("email_field").value;
+  var userPass = document.getElementById("password_field").value;
+  console.log(userEmail);
+  console.log(userPass);
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
+
+}
+
+function logout(){
+  firebase.auth().signOut();
+}
+
+  </script>
+
+
+</body>
+</html>
